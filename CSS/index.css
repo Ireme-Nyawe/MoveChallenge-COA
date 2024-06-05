@@ -32,3 +32,11 @@ color: #007bff;
     background-color: #007bff;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+.full-view {
+    width: 100%;
+  }
+  
+  .full-view .image img {
+    width: 100%;
+    height: auto;
+  }
