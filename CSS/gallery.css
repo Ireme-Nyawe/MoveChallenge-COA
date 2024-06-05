@@ -65,12 +65,15 @@ body {
 }
 
 .image-info button {
-  color: rgb(153, 255, 0);
+  color: rgb(0, 255, 220);
   display: none;
   padding: 5px 10px;
   background-color: transparent;
   border: none;
   font-weight: 600;
+  font-size: 1rem;
+  transition: none;
+
 }
 
 /* ensure responsiveness on small screen including mobile devices */
