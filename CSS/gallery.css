@@ -12,6 +12,7 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .image-interaction {
@@ -20,7 +21,7 @@ body {
   overflow: hidden;
   cursor: pointer;
   height: 100vh;
-  width: 24vw; 
+  width: 25vw; 
   margin: 0; 
 }
 
@@ -75,7 +76,7 @@ body {
 /* ensure responsiveness on small screen including mobile devices */
 @media (max-width: 768px) {
   .image-info {
-  display: none; /*Hide image info on small screens*/
+  display: none; 
   }
   }
   
