@@ -6,11 +6,12 @@
 - **/CSS/**: Contains CSS styles for all HTML Documents.
 - **/assets/**: This directory contains all needes assets in challenges mainly images.
 - **/PhotoGallery/**: This directory contains source codes for Photo Gallery Challenge.
+- **/scripts/**: This directory contains scripts for Photo Gallery Challenge.
 - **/Challenges/**: This consists source codes for other two challenges, ### arrayMap and ### string Transformation.
 
 ## Running the Challenges
 
-To run the JavaScript challenges, follow these steps:
+To run challenges, follow these steps:
 
 1. Open entry point In browser 
 2. Select Challenge to move on
