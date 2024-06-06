@@ -4,12 +4,14 @@ function checkSubArraySum(arr, target) {
 
     for (let num of arr) {
         subSum += num;
+
         if (subSum === target) {
             return true;
         }
         if (subSums.has(subSum - target)) {
             return true;
         }
+        
         subSums.add(subSum);
     }
 
