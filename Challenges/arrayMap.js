@@ -1,22 +1,30 @@
-function checkSubArraySum(arr, target) {
-    let subSum = 0;
-    const subSums = new Set();
-
-    for (let num of arr) {
-        subSum += num;
-
-        if (subSum === target) {
-            return true;
+function checkSubArraySum(arr,target){
+  var arraySorted=arr.sort();
+  var result=false;
+  var possibleSum=arraySorted[0];
+  if(arraySorted.includes(target)){
+    result=true;
+  }
+  else{
+    for(let i=0;i<arraySorted.length;i++){
+      if(i>0){
+        if((arr[i-1]+1)==arr[i]){
+          possibleSum+=arr[i];
         }
-        if (subSums.has(subSum - target)) {
-            return true;
+        else{
+          possibleSum=arr[i];
         }
-        
-        subSums.add(subSum);
+      }
+      if(possibleSum==target){
+        result = true;
+        break;
+      }
+  
     }
-
-    return false;
+  }
+  return result;
 }
+
 
 document.getElementById('subarrayForm').addEventListener('submit', function(event) {
     event.preventDefault();
