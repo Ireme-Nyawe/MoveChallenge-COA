@@ -1,25 +1,21 @@
 function checkSubArraySum(arr, target) {
-  var arraySorted = arr.sort();
-  var result = false;
-  var possibleSum = arraySorted[0];
-  if (arraySorted.includes(target)) {
-    result = true;
-  } else {
-    for (let i = 0; i < arraySorted.length; i++) {
-      if (i > 0) {
-        if (arr[i - 1] + 1 == arr[i]) {
-          possibleSum += arr[i];
-        } else {
-          possibleSum = arr[i];
-        }
-      }
-      if (possibleSum == target) {
-        result = true;
-        break;
-      }
+  let initial = 0;
+  let currentSum = 0;
+
+  for (let end = 0; end < arr.length; end++) {
+    currentSum += arr[end];
+
+    while (currentSum > target && initial <= end) {
+      currentSum -= arr[initial];
+      initial += 1;
+    }
+
+    if (currentSum === target) {
+      return true;
     }
   }
-  return result;
+
+  return false;
 }
 
 document
