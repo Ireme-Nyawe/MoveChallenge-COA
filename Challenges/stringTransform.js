@@ -1,6 +1,13 @@
 function transformString(str) {
+  const alphanumericRegex = /^[a-zA-Z0-9\s]+$/;
   const length = str.length;
-
+  if(length>1000){
+    str ="String Length must be not more than 1000 characters!"
+  }
+else if (!alphanumericRegex.test(str)) {
+    str ="String must be alpha numeric!"
+}
+else{
   if (length % 15 === 0) {
     // Reverse the string and replace each character with its ASCII code
     str = str.split("").reverse().join("");
@@ -18,7 +25,7 @@ function transformString(str) {
       .map((char) => char.charCodeAt(0))
       .join("");
   }
-
+}
   return str;
 }
 
